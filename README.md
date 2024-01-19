@@ -1,6 +1,6 @@
 PrisonersDilemmaAutomaton
 =========================
-The **Prisoner's Dilemma** is a classic problem in game theory shows why two completely rational individuals might not cooperate, even if it appears that it is in their best interests to do so. It was originally framed by Merrill Flood and Melvin Dresher while working at RAND in 1950. Albert W. Tucker formalized the game with prison sentence rewards and named it "Prisoner's Dilemma". In the scenario, two individuals are arrested, but the evidence against them is not sufficient for a conviction. Each prisoner faces a choice: cooperate with the other by remaining silent, or betray the other by confessing. The dilemma arises because the outcome depends on the choices made by both individuals. If both cooperate, they receive a moderate sentence. If one betrays the other, the betrayer goes free, while the betrayed receives a harsh sentence. If both betray, they both receive a moderately severe sentence.
+The **Prisoner's Dilemma** is a classic problem in game theory that shows why two completely rational individuals might not cooperate, even if it appears that it is in their best interests to do so. It was originally framed by Merrill Flood and Melvin Dresher while working at RAND in 1950. Albert W. Tucker formalized the game with prison sentence rewards and named it "Prisoner's Dilemma". In the scenario, two individuals are arrested, but the evidence against them is not sufficient for a conviction. Each prisoner faces a choice: cooperate with the other by remaining silent, or betray the other by confessing. The dilemma arises because the outcome depends on the choices made by both individuals. If both cooperate, they receive a moderate sentence. If one betrays the other, the betrayer goes free, while the betrayed receives a harsh sentence. If both betray, they both receive a moderately severe sentence.
 
 In the context of the **Iterated Prisoner's Dilemma (IPD)**, the scenario is repeated multiple times, allowing for the exploration of strategies that consider the history of interactions between the individuals.
 
@@ -8,7 +8,7 @@ In the context of the **Iterated Prisoner's Dilemma (IPD)**, the scenario is rep
 Scope
 -----
 
-This project is intended as a systematic exploration of the iterated prisoner's dilemma (IPD) rulespace. The specific rule is assigned to an agent using the principle of binary finite state machines. The decision making process of the agent is fully determined by its **binary ID**. The specific behaviour exhibited by an agent in IDP is determined by the binary ID's of **both** agents. 
+This project is intended as a systematic exploration of the iterated prisoner's dilemma (IPD) rule space. The specific rule is assigned to an agent using the principle of binary finite state machines. The decision-making process of the agent is fully determined by its **binary ID**. The specific behavior exhibited by an agent in IDP is determined by the binary ID's of **both** agents. 
 
 Project Implementation
 ----------------------
@@ -16,7 +16,7 @@ Project Implementation
 The project is implemented using three interrelated Python classes: `Agent`, `Environment`, and `Tournament`. Detailed documentation of the classes is provided in the respective .py files. 
 
 ### `Agent`
-In the Iterated Prisoner’s Dilemma (IPD) game, an agent is a player whose objective is to maximize their own score. The score is calculated based on a payoff function, and the agent’s decision is based on the history of the game. Each `Agent` class is assigned a binary ID, which is then converted into a single bit and a 2D matrix. The single bit determines the agent’s initial decision, while the 2D matrix, when multiplied with the game’s history, determines the agent’s decision in subsequent rounds. The agent cooperates if the sum of the multiplication is positive or zero, and defects if the sum is negative. The decisions are stored and passed to the agents in the next round.
+In the Iterated Prisoner’s Dilemma (IPD) game, an agent is a player whose objective is to maximize their score. The score is calculated based on a payoff function, and the agent’s decision is based on the history of the game. Each `Agent` class is assigned a binary ID, which is converted into a single bit and a 2D matrix. The single bit determines the agent’s initial decision, while the 2D matrix, when multiplied with the game’s history, determines the agent’s decision in subsequent rounds. The agent cooperates if the sum of the multiplication is positive or zero, and defects if the sum is negative. The decisions are stored and passed to the agents in the next round.
 
 ### `Environment`
 The `Environment` class in the Iterated Prisoner's Dilemma (IPD) game serves as the arena where two agents compete. It accepts a payoff function, a length parameter, and a Poisson parameter. The payoff function calculates the agents' scores based on their decisions, while the Poisson parameter introduces randomness to the game's length. The game iterates over the specified length, with agents making decisions based on the game's history. These decisions are stored and passed to the agents in subsequent rounds. The `Environment` class returns the accumulated points from the payoff function and the history of decisions.
@@ -31,7 +31,7 @@ Find an example of how the repository can be used in the `prisoners_dilemma.ipyn
 Project Results
 ---------------
 The results can also be found in the `prisoners_dilemma.ipynb` notebook.
-the highligt of the results is a plot of the score of each agent in the tournament against each other player of the tournament with $2^7$ competitors. In total there were $2^{14}$ games played.
+The highlight of the results is a plot of the score of each agent in the tournament against each other player of the tournament with $2^7$ competitors. In total, there were $2^{14}$ games played.
 ![Adjacency score plot](./assets/prisoners_dilemma.png)
 
 Requirements
