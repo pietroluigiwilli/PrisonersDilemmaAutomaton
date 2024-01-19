@@ -31,8 +31,8 @@ Find an example of how the repository can be used in the `prisoners_dilemma.ipyn
 Project Results
 ---------------
 The results can also be found in the `prisoners_dilemma.ipynb` notebook.
-the highligt of the results is a plot of the score of each agent in the tournament against each other player of the tournament with $$2^7$$ competitors. In total there were $$2^{14}$$ games played.
-![Adjacency score plot](http://github.com/pietroluigiwilli/PrisonersDilemmaAutomaton/assets/prisoners_dilemma.png)
+the highligt of the results is a plot of the score of each agent in the tournament against each other player of the tournament with $2^7$ competitors. In total there were $2^{14}$ games played.
+![Adjacency score plot](./assets/prisoners_dilemma.png)
 
 Requirements
 ------------
